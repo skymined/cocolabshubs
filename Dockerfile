@@ -16,7 +16,7 @@ ARG BRANCH_NAME=data_engineers
 ARG DIR_NAME=cocolabhubs # 변경 대상
 
 # Clone the Git repository. Here we dynamically specify the repository name using the variable defined earlier.
-RUN git clone https://github.com/gocolab/co_templates ${DIR_NAME}
+RUN git clone https://github.com/skymined/co_templates ${DIR_NAME}
 
 # Changes the working directory to /app/${REPO_NAME}. This uses the variable to dynamically set the directory path.
 WORKDIR /app/${DIR_NAME}
@@ -24,5 +24,5 @@ WORKDIR /app/${DIR_NAME}
 # RUN pip install --no-cache-dir -r ./requirements.txt
 RUN pip install -r ./requirements.txt
 
-RUN rm -rf .git
+# RUN rm -rf .git
 
